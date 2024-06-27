@@ -1,14 +1,17 @@
+
+    <!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>BlogApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
+  
 
   <body>
     <header class="header">
@@ -21,6 +24,13 @@
         </div>
       </div>
     </header>
+    <% if flash.present? %>
+     <div class="flash">
+      <% flash.each do |key, value| %>
+       <div class="<%= key %>"><%= value %></div>
+      <% end %>
+     </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
