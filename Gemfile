@@ -72,3 +72,10 @@ end
 
 gem 'sassc'
 
+gem 'webpacker'
+
+gem 'sass-rails', '>= 6'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 5.0'
+gem 'turbolinks', '~> 5'
+
