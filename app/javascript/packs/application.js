@@ -18,24 +18,19 @@
 
 // app/javascript/packs/application.js
 
-// Import necessary libraries and modules
-import Rails from "@rails/ujs";
-import Turbolinks from "turbolinks";
-import * as ActiveStorage from "@rails/activestorage";
 import { Application } from "@hotwired/stimulus";
-import "channels";
+import Rails from "@rails/ujs";
 import "controllers";
 
-// Start Rails UJS, Turbolinks, and ActiveStorage
 Rails.start();
-Turbolinks.start();
-ActiveStorage.start();
 
-// Start Stimulus
 const application = Application.start();
+
+// Configure Stimulus development experience
 application.debug = false;
 window.Stimulus = application;
 
 export { application };
+
 
 
