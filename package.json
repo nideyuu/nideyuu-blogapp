@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "clean": "rm -rf dist/* || del /q dist\\*",
+    "build": "webpack --config webpack.config.js"
+  },
   "dependencies": {
     "@rails/ujs": "^7.1.3-4",
     "@rails/webpacker": "5.4.4",
@@ -6,6 +10,8 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "webpack-dev-server": "^3"
   }
 }
+
